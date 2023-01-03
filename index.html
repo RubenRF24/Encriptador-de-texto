@@ -17,18 +17,23 @@
     <main>
         <section class="encriptador">
             <div class="contenido-encriptador">
-                <input type="text" placeholder="Ingrese el texto aqui">
-                <p><img src="imagenes/exclamacion.png" alt="simbolo de alerta">Solo letras minusculas y sin acentos </p>
-                <input type="button" value="Encriptar">
-                <input type="button" value="Desencriptar">
+                <textarea cols="70" rows="10" id="mensaje-principal">Ingrese el texto aqui</textarea>>
             </div>
+                <p><img src="imagenes/exclamacion.png" alt="simbolo de alerta">Solo letras minusculas y sin acentos </p>
+                <input type="button" value="Encriptar" class="boton">
+                <input type="button" value="Desencriptar" class="boton">
+            
         </section>
-
         <section class="resultado">
             <div class="contenido-desencriptado">
-                <h2>Ningun mensaje fue encontrado</h2>
-                <p>Ingresar el mensaje que desees encriptar o desencriptar</p>
-                <input type="button" value="Copiar">
+                <ul class="resultado">
+                    <li>
+                        <img src="imagenes/animal-penguin.gif">
+                        <h2>Ningun mensaje fue encontrado</h2>
+                        <p>Ingresar el mensaje que desees encriptar o Desencriptar</p>
+                    </li>
+                </ul>
+                <input type="button" value="Copiar" class="boton">
             </div>
         </section>
     </main>
