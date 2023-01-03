@@ -1,6 +1,7 @@
 body{
     font-family: 'Cabin', sans-serif;
     color: #000;
+    background: #54869b;;
 }
 
 header{
@@ -11,7 +12,7 @@ header{
 
 .contenedor-titulo{
     display: block;
-    padding: 10px 10px 0 0;
+    padding: 5px 10px 0 0;
     margin: 0 15px;
 }
 
@@ -31,10 +32,14 @@ main{
 
 .encriptador, .resultado{
     display: inline-block;
-    width: 45%;
+    width: 55%;
     padding: 20px;
     margin: 10px 0;
     text-align: center;
+}
+
+.resultado{
+    width: 35%;
 }
 
 .contenido-encriptador{
@@ -46,6 +51,7 @@ textarea{
     resize: none;
     width: 95%;
     height: 320px;
+    padding: 15px;
     border: none;
     border-radius: 5px;
     background: lightskyblue;
@@ -84,7 +90,7 @@ textarea{
 .boton:hover{
     transition: 0.5s;
     background: #56b0d6;
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .boton:active{
@@ -115,7 +121,7 @@ textarea{
 
 .contenedor-resultado li h2{
     width: 100%;
-    padding: 10px;
+    padding: auto;
     font-size: 1.5rem;
     font-weight: bold;
     color: rgb(60, 16, 162);
@@ -130,7 +136,84 @@ textarea{
     width: 100%;
 }
 
-footer{
-    background: #54869b;
+.contenedor-footer{
+    width: 70%;
+    padding: 0 0 20px 20px ;
+    margin: 0 0 10px 10px;
 }
 
+.contenedor-footer img{
+    width: 30px;
+    margin: auto;
+}
+
+.contenedor-footer a{
+    margin-left: 10px;
+    font-size: 1.5em;
+    text-decoration: none;
+    color: #000;
+}
+
+.contenedor-footer a:hover{
+    text-decoration: underline;
+}
+
+@media screen and (max-width:480px) {
+    .contenedor-titulo{
+        text-align: center;
+        padding: 20px;
+    }
+
+    .caja{
+        text-align: center;
+    }
+
+    .encriptador, .resultado, .contenido-desencriptado ,.contenedor-resultado, .contenedor-titulo{
+        width: auto;
+    }
+
+    .boton{
+        display: inline;
+        width: 70%;
+        margin-bottom: 10px;
+        font-size: 1.1em;
+        padding: auto;
+    }
+
+    .resultado ,.contenedor-resultado{
+        padding: 0;
+        padding-bottom: 25px;;
+    }
+
+    .contenedor-resultado li{
+        height: auto;
+    }
+}
+
+@media screen and ((max-width:939px) and (min-width:480px)){
+    .contenedor-titulo{
+        text-align: center;
+        padding: 20px;
+    }
+    .caja{
+        text-align: center;
+    }
+
+    .resultado{
+        width: auto;
+        padding-top: 0;
+    }
+
+    .contenedor-resultado li{
+        width: 80%;
+        height: auto;
+    }
+
+    .boton{
+        font-size: 1em;
+    }
+
+    #boton-copiar{
+        width: 30%;
+    }
+}
