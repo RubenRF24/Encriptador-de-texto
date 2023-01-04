@@ -15,6 +15,7 @@ function mensajeNoEncontrado(){
 
 function esMayuscula(letra){
     if(letra === " ") return false
+    if((letra.charCodeAt(0) >= 65) && (letra.charCodeAt(0) <= 90)) return true
     if((letra.charCodeAt(0) < 97) || (letra.charCodeAt(0) > 122)) return false
 
     return letra === letra.toUpperCase();
