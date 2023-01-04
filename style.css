@@ -110,8 +110,9 @@ textarea{
     box-shadow: 9px -5px 16px 3px #224d5f;
     background-color: #6ec3e8;
     border: 2px solid #000;
-    padding: 20px;
+    padding: 15px;
     margin: auto;
+    margin-bottom: 30px;
 }
 
 .imagen-resultado{
@@ -127,13 +128,20 @@ textarea{
     color: rgb(60, 16, 162);
 }
 
+#mensaje-encriptado{
+    font-size: 1.3em;
+    height: 320px;
+    text-align: left;
+    width: 100%;
+}
+
+#mensaje-encriptado img, #mensaje-encriptado h2{
+    display: none;
+}
+
 #boton-copiar{
     width: 60%;
     margin-left: 10px;
-}
-
-.resultado li p{
-    width: 100%;
 }
 
 .contenedor-footer{
@@ -188,6 +196,14 @@ textarea{
     .contenedor-resultado li{
         height: auto;
     }
+
+    #mensaje-encriptado{
+        width: 80%;
+    }
+
+    .mensaje-encriptado img, .mensaje-encriptado h2{
+        height: 320px;
+    }
 }
 
 @media screen and ((max-width:939px) and (min-width:480px)){
@@ -207,6 +223,14 @@ textarea{
     .contenedor-resultado li{
         width: 80%;
         height: auto;
+    }
+
+    #mensaje-encriptado{
+        width: 70%;
+    }
+
+    .mensaje-encriptado img, .mensaje-encriptado h2{
+        height: 320px;
     }
 
     .boton{
