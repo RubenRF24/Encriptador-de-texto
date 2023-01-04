@@ -1,10 +1,16 @@
 let botonEncriptador = document.querySelector("#boton-encriptar");
 let botonDesencriptador = document.querySelector("#boton-desencriptador");
 let botonCopiar = document.querySelector("#boton-copiar")
+let li = document.querySelector("li")
 
 function obtenerMensaje() {
     let cadenaUsuario = document.getElementById("mensaje-principal").value;
     return cadenaUsuario;
+}
+
+function mensajeNoEncontrado(){
+    li.removeAttribute("id")
+    document.getElementById("mensaje-resultado").innerHTML="Ingresa el mensaje que desses encriptar o desencriptar"
 }
 
 function esMayuscula(letra){
@@ -31,20 +37,28 @@ function detectarAcentos(cadena) {
     return cadena === eliminarDiacriticos(cadena)
 }
 
+function mostrarResultado(cadena) {
+    li.setAttribute("id","mensaje-encriptado")
+    document.getElementById("mensaje-resultado").innerHTML=cadena;
+}
+
 function encriptarMensaje() {
     let cadena = obtenerMensaje();
     if(typeof cadena !== 'string') throw new Error("El parametro obtenido debe ser un String")
-    if(cadena === "") throw new Error("El texto debe tener almenos una letra");
+    if(cadena === "") {
+        mensajeNoEncontrado()
+        throw new Error("El texto debe tener almenos una letra")}
     if(detectarMayusculas(cadena)) throw new Error("El mensaje no puede contener letras mayusculas")
     if(!detectarAcentos(cadena)) throw new Error("El mensaje no puede contener acentos")
 
-    
+
+    mostrarResultado(cadena)
 
     console.log(cadena)
 }
 
 function copiar() {
-    var codigoACopiar = document.getElementById('mensaje-encriptado');
+    var codigoACopiar = document.getElementById('mensaje-resultado');
     var seleccion = document.createRange();
     seleccion.selectNodeContents(codigoACopiar);
     window.getSelection().removeAllRanges();
@@ -54,5 +68,3 @@ function copiar() {
 }
 botonEncriptador.onclick = encriptarMensaje;
 botonCopiar.onclick = copiar;
-
-

@@ -104,7 +104,7 @@ textarea{
 .contenedor-resultado{
     padding: 25px;
 }
-.contenedor-resultado li{
+.lista-resultado li{
     width: 60%;
     height: 320px;
     box-shadow: 9px -5px 16px 3px #224d5f;
@@ -112,7 +112,8 @@ textarea{
     border: 2px solid #000;
     padding: 15px;
     margin: auto;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
+    transition: 1s;
 }
 
 .imagen-resultado{
@@ -120,7 +121,7 @@ textarea{
     text-align: center;
 }
 
-.contenedor-resultado li h2{
+.lista-resultado li h2{
     width: 100%;
     padding: auto;
     font-size: 1.5rem;
@@ -133,6 +134,7 @@ textarea{
     height: 320px;
     text-align: left;
     width: 100%;
+    transition: 1s;
 }
 
 #mensaje-encriptado img, #mensaje-encriptado h2{
@@ -176,7 +178,7 @@ textarea{
         text-align: center;
     }
 
-    .encriptador, .resultado, .contenido-desencriptado ,.contenedor-resultado, .contenedor-titulo{
+    .encriptador, .resultado, .contenido-desencriptado ,.lista-resultado, .contenedor-titulo{
         width: auto;
     }
 
@@ -188,12 +190,12 @@ textarea{
         padding: auto;
     }
 
-    .resultado ,.contenedor-resultado{
+    .resultado ,.lista-resultado{
         padding: 0;
         padding-bottom: 25px;;
     }
 
-    .contenedor-resultado li{
+    .lista-resultado li{
         height: auto;
     }
 
@@ -220,7 +222,7 @@ textarea{
         padding-top: 0;
     }
 
-    .contenedor-resultado li{
+    .lista-resultado li{
         width: 80%;
         height: auto;
     }
