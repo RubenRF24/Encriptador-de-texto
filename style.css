@@ -178,8 +178,12 @@ textarea{
         text-align: center;
     }
 
-    .encriptador, .resultado, .contenido-desencriptado ,.lista-resultado, .contenedor-titulo{
+    .encriptador, .contenido-desencriptado ,.lista-resultado, .contenedor-titulo{
         width: auto;
+    }
+
+    .resultado{
+        width: 100%;
     }
 
     .boton{
@@ -203,7 +207,7 @@ textarea{
         width: 80%;
     }
 
-    .mensaje-encriptado img, .mensaje-encriptado h2{
+    #mensaje-encriptado img, #mensaje-encriptado h2{
         height: 320px;
     }
 }
@@ -218,12 +222,12 @@ textarea{
     }
 
     .resultado{
-        width: auto;
+        width: 70%;
         padding-top: 0;
     }
 
     .lista-resultado li{
-        width: 80%;
+        width: 60%;
         height: auto;
     }
 
@@ -231,7 +235,7 @@ textarea{
         width: 70%;
     }
 
-    .mensaje-encriptado img, .mensaje-encriptado h2{
+    #mensaje-encriptado img, #mensaje-encriptado h2{
         height: 320px;
     }
 
