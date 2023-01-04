@@ -1,5 +1,5 @@
 let botonEncriptador = document.querySelector("#boton-encriptar");
-let botonDesencriptador = document.querySelector("#boton-desencriptador");
+let botonDesencriptador = document.querySelector("#boton-desencriptar");
 let botonCopiar = document.querySelector("#boton-copiar")
 let li = document.querySelector("li")
 
@@ -14,6 +14,9 @@ function mensajeNoEncontrado(){
 }
 
 function esMayuscula(letra){
+    if(letra === " ") return false
+    if((letra.charCodeAt(0) < 97) || (letra.charCodeAt(0) > 122)) return false
+
     return letra === letra.toUpperCase();
 }
 
@@ -51,10 +54,31 @@ function encriptarMensaje() {
     if(detectarMayusculas(cadena)) throw new Error("El mensaje no puede contener letras mayusculas")
     if(!detectarAcentos(cadena)) throw new Error("El mensaje no puede contener acentos")
 
+    const coincidencias = [/e/gi,/i/gi,/a/gi,/o/gi,/u/gi];
+    const traduccion = ["enter","imes","ai","ober","ufat"]
+    for(var i = 0; i < coincidencias.length; i++){
+        cadena = cadena.replace(coincidencias[i],traduccion[i])
+    }
 
     mostrarResultado(cadena)
+}
 
-    console.log(cadena)
+function desencriptarMensaje() {
+    let cadena = obtenerMensaje();
+    if(typeof cadena !== 'string') throw new Error("El parametro obtenido debe ser un String")
+    if(cadena === "") {
+        mensajeNoEncontrado()
+        throw new Error("El texto debe tener almenos una letra")}
+    if(detectarMayusculas(cadena)) throw new Error("El mensaje no puede contener letras mayusculas")
+    if(!detectarAcentos(cadena)) throw new Error("El mensaje no puede contener acentos")
+
+    const coincidencias = [/enter/gi,/imes/gi,/ai/gi,/ober/gi,/ufat/gi];
+    const traduccion = ["e","i","a","o","u"]
+    for(var i = 0; i < coincidencias.length; i++){
+        cadena = cadena.replace(coincidencias[i],traduccion[i])
+    }
+
+    mostrarResultado(cadena)
 }
 
 function copiar() {
@@ -66,5 +90,7 @@ function copiar() {
     var res = document.execCommand('copy');
     window.getSelection().removeRange(seleccion);
 }
+
 botonEncriptador.onclick = encriptarMensaje;
+botonDesencriptador.onclick = desencriptarMensaje;
 botonCopiar.onclick = copiar;
