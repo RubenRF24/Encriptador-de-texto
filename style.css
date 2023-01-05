@@ -135,6 +135,7 @@ textarea{
     text-align: left;
     width: 100%;
     transition: 1s;
+    overflow: auto;
 }
 
 #mensaje-encriptado img, #mensaje-encriptado h2{
@@ -159,9 +160,6 @@ textarea{
 
 .contenedor-footer a{
     margin-left: 10px;
-    font-size: 1.5em;
-    text-decoration: none;
-    color: #000;
 }
 
 .contenedor-footer a:hover{
