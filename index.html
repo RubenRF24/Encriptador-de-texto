@@ -1,58 +1,67 @@
 <!DOCTYPE html>
-
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Encriptador de texto </title>
-        <link rel="stylesheet" href="reset.css">
-        <link rel="stylesheet" href="style.css">
-        <link rel="icon" href="imagenes/icono.ico">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@500&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <header>
-            <div class="contenedor-titulo">
-                <h1>Encriptador y Desencriptador de texto</h1>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="imagenes/icono.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@500&display=swap" rel="stylesheet">
+    <title>Encriptador de Texto</title>
+</head>
+<body>
+    <header>
+        <div class="contenedor">
+            <div class="tittle">
+                <h1 class="title__titulo">Encriptador y Desencriptador de texto</h1>
             </div>
-        </header>
-        <main>
-            <div class="caja">
-                <section class="encriptador">
-                    <div class="contenido-encriptador">
-                        <textarea cols="70" rows="10" id="mensaje-principal" placeholder="Ingrese el texto aquí"></textarea>
-                    </div>
-                        <p>Solo letras minusculas y sin acentos </p>
-                    <div class="contenedor-boton">
-                        <button class="boton" id="boton-encriptar">Encriptar</button>
-                        <button class="boton" id="boton-desencriptar">Desencriptar</button>
-                    </div>
-                </section>
-                <section class="resultado">
-                    <div class="contenido-desencriptado">
-                            <ul class="lista-resultado">
-                                <li>
-                                    <img src="imagenes/animal-penguin.png" class="imagen-resultado" alt="pajaro con signo de interrogacion">
-                                    <h2 id="mensaje-estado">Ningun mensaje fue encontrado</h2>
-                                    <p id="mensaje-resultado">Ingresa el mensaje que desees encriptar o Desencriptar</p>
-                                </li>
-                            </ul>
-                        <div class="contenedor-boton">
-                            <button class="boton" id="boton-copiar">Copiar</button>
-                        </div>
-                    </div>
-                </section>
+        </div>
+    </header>
+    <main>
+        <div class="contenedor">
+            <div class="contenido contenido-entrada">
+                <textarea cols="50" rows="10" class="contenido-entrada__textarea" id="contenido-entrada__textarea" placeholder="Ingrese el texto aqui"></textarea>
+                <p class="entrada__advertencia">Solo letras minusculas y sin acentos</p>
+                <a href="#" class="boton" id="boton--encriptar">
+                    <span>Encriptar</span>
+                    <i class="fa-solid fa-lock"></i>
+                </a>
+                <a href="#" class="boton" id="boton--desencriptar">
+                    <span>Desencriptar</span>
+                    <i class="fa-solid fa-lock-open"></i>
+                </a>
             </div>
-        </main>
-        <footer>
-            <div class="contenedor-footer">
-                <a href="https://www.linkedin.com/in/rubenrobles-wd/" target="_blank"><img src="imagenes/logotipo-de-linkedin.png" alt="Logo de Linkedin"></a>
-                <a href="https://github.com/RubenRF24" target="_blank"><img src="imagenes/logo-github.png" alt="Logo de GitHub"></a>
+
+            <div class="contenido contenido-salida">
+                <div class="contenido-salida__resultado">
+                    <img class="contenido-salida__img" id="contenido-salida__img" src="imagenes/animal-penguin.png">
+                    <h2 class="contenido-salida__titulo" id="contenido-salida__titulo">Ningun mensaje fue encontrado</h2>
+                    <p class="contenido-salida__texto" id="contenido-salida__texto">Ingresa el mensaje que desees encriptar o Desencriptar</p>
+                </div>
+                <a href="#" class="boton boton--copiar" id="boton--copiar">
+                    <span>Copiar</span>
+                    <i class="fa-regular fa-copy"></i>
+                </a>
             </div>
-        </footer>
-        <script src="script.js"></script>
-    </body>
+        </div>
+    </main>
+    <footer>
+        <div class="contenedor">
+            <div class="links">
+                <a href="https://www.linkedin.com/in/rubenrobles-wd/" class="links links__linkedin">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/RubenRF24" class="links links__github">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="https://kit.fontawesome.com/c950979f12.js" crossorigin="anonymous"></script>
+</body>
 </html>
